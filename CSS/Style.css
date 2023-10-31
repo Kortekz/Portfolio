@@ -5,13 +5,15 @@
 
 :root {
     --blue: #0010c5;
-    --lightblue:  rgb(0, 26, 255);
+    --lightblue:  rgb(0, 119, 255);
+    --Navyblue: #000214;
   }
 
 /* NAVBAR */
 ul li a:hover {
-    color: var(--blue) !important; /* Change the text color on hover */
-    transition: color 0.5s;
+    color: var(--lightblue) !important; /* Change the text color on hover */
+    transition: color 0.5s, transform 0.5s;
+    transform: scale(1.09); /* Increase the scale to make it pop out */
 }
 ul{
     text-decoration: none;
@@ -27,7 +29,7 @@ li::after{
     color: var(--lightblue);
     transition: color 0.5s;
     position: absolute;
-    right: 5px;
+    right: 15px;
     top: 21px;
     bottom: 0;
     margin: auto;
@@ -48,17 +50,20 @@ li:hover::after {
     padding: 10px 16px;
     padding-bottom: 15px;
     color: #fff; /* Text color */
-    transition-duration: 0.3s;
+    transform-origin: center;
+    transition: color 0.5s, transform 0.5s;
 }
 .navbar .logo:hover{
-color: var(--blue);
+color: var(--lightblue);
 cursor: pointer;
-transition: color 0.5s;
+transition: color 0.5s, transform 0.5s;
+transform: scale(1.1); /* Increase the scale to make it pop out */
+
 }
 .navbar .logo:before,
 .navbar .logo:after {
     content: "<";
-    color: var(--blue);
+    color: var(--lightblue);
     transition: color 0.5s;
 }
 .navbar .logo:hover:before,
@@ -72,8 +77,43 @@ transition: color 0.5s;
     float: left;
     font-size: 20px;
     text-align: center;
-    padding: 10px 18px;
+    padding: 5px 5px;
     text-decoration: none;
-    padding-right: 35px;
+    padding-right: 52px;
     padding-top: 20px;
+    transition: transform 0.5s;
+}
+/* HOME PAGE */
+
+body{
+background-color: var(--Navyblue);
+}
+.home-info{
+    text-align: center;
+    padding-top: 50px;
+    color: white;
+    font-size: 28px;
+    margin: 0 300px;
+    padding-bottom: 20px;
+}
+
+.Des{
+    color: var(--lightblue);
+    font-style: italic;
+}
+.Dev{
+    color: var(--lightblue);
+    font-style: italic;
+}
+span{
+    color: var(--lightblue);
+}
+.hmImg{
+    text-align: center;
+    
+}
+.hmImg img{
+    width: 480px;
+    height: 450px;
+    border-radius: 50%;
 }
